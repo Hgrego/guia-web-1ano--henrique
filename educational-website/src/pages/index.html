@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia Profissional de Desenvolvimento Web</title>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="header__title">Guia Profissional de Desenvolvimento Web</h1>
+            <button class="header__menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-nav">
+                <span class="hamburger"></span>
+            </button>
+            <nav id="main-nav" class="nav">
+                <ul class="nav__list">
+                    <li><a href="index.html" class="nav__link nav__link--active">Home</a></li>
+                    <li><a href="tecnologias.html" class="nav__link">Tecnologias</a></li>
+                    <li><a href="boas-praticas.html" class="nav__link">Boas Práticas</a></li>
+                    <li><a href="fluxo.html" class="nav__link">Fluxo</a></li>
+                    <li><a href="quiz.html" class="nav__link">Quiz</a></li>
+                </ul>
+            </nav>
+            <button class="theme-toggle" aria-label="Alternar tema">
+                <svg class="theme-toggle__icon" width="24" height="24" aria-hidden="true">
+                    <use href="../assets/icons.svg#sun"></use>
+                </svg>
+            </button>
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h2 class="hero__title">Aprenda desenvolvimento web do zero ao profissional</h2>
+                <p class="hero__text">Um guia completo sobre as tecnologias e práticas essenciais para se tornar um desenvolvedor web.</p>
+                <a href="#fundamentos" class="button button--primary">Começar</a>
+            </div>
+        </section>
+
+        <section id="fundamentos" class="fundamentos">
+            <div class="container">
+                <h2 class="section-title">Fundamentos</h2>
+                <div class="card-grid">
+                    <article class="card">
+                        <h3 class="card__title">HTML</h3>
+                        <p class="card__text">Estrutura e semântica para seu conteúdo web.</p>
+                        <pre class="card__code"><code>&lt;article&gt;
+  &lt;h2&gt;Título&lt;/h2&gt;
+  &lt;p&gt;Conteúdo&lt;/p&gt;
+&lt;/article&gt;</code></pre>
+                        <p class="card__usage">Use para estruturar e organizar o conteúdo da página.</p>
+                    </article>
+
+                    <article class="card">
+                        <h3 class="card__title">CSS</h3>
+                        <p class="card__text">Estilização e layout para suas páginas.</p>
+                        <pre class="card__code"><code>.card {
+  display: flex;
+  padding: 1rem;
+  border-radius: 8px;
+}</code></pre>
+                        <p class="card__usage">Use para definir aparência e posicionamento dos elementos.</p>
+                    </article>
+
+                    <article class="card">
+                        <h3 class="card__title">JavaScript</h3>
+                        <p class="card__text">Interatividade e funcionalidades dinâmicas.</p>
+                        <pre class="card__code"><code>document.querySelector('.button')
+  .addEventListener('click', () => {
+    console.log('Clicado!');
+});</code></pre>
+                        <p class="card__usage">Use para adicionar comportamento e interatividade.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <nav class="footer__nav">
+                <ul class="footer__list">
+                    <li><a href="tecnologias.html" class="footer__link">Tecnologias</a></li>
+                    <li><a href="boas-praticas.html" class="footer__link">Boas Práticas</a></li>
+                    <li><a href="fluxo.html" class="footer__link">Fluxo</a></li>
+                    <li><a href="quiz.html" class="footer__link">Quiz</a></li>
+                </ul>
+            </nav>
+            <p class="footer__copyright">&copy; 2025 Guia Profissional de Desenvolvimento Web</p>
+        </div>
+    </footer>
+    <script type="module" src="../js/main.js"></script>
+</body>
+</html>

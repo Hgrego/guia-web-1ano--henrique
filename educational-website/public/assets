@@ -1,0 +1,13 @@
+educational-website
+├── src
+│   ├── css
+│   │   ├── style.css
+│   │   └── normalize.css
+│   ├── js
+│   │   └── main.js
+│   └── pages
+│       └── index.html
+├── public
+│   └── assets
+├── .gitignore
+└── README.md

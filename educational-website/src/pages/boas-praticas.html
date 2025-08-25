@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boas Práticas - Guia Profissional de Desenvolvimento Web</title>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="header__title">Guia Profissional de Desenvolvimento Web</h1>
+            <button class="header__menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-nav">
+                <span class="hamburger"></span>
+            </button>
+            <nav id="main-nav" class="nav">
+                <ul class="nav__list">
+                    <li><a href="index.html" class="nav__link">Home</a></li>
+                    <li><a href="tecnologias.html" class="nav__link">Tecnologias</a></li>
+                    <li><a href="boas-praticas.html" class="nav__link nav__link--active">Boas Práticas</a></li>
+                    <li><a href="fluxo.html" class="nav__link">Fluxo</a></li>
+                    <li><a href="quiz.html" class="nav__link">Quiz</a></li>
+                </ul>
+            </nav>
+            <button class="theme-toggle" aria-label="Alternar tema">
+                <svg class="theme-toggle__icon" width="24" height="24" aria-hidden="true">
+                    <use href="../assets/icons.svg#sun"></use>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero hero--small">
+            <div class="container">
+                <h2 class="hero__title">Boas Práticas de Desenvolvimento</h2>
+                <p class="hero__text">Aprenda as melhores práticas para criar sites profissionais e de qualidade</p>
+            </div>
+        </section>
+
+        <section class="best-practices">
+            <div class="container">
+                <div class="progress-section">
+                    <h3 class="progress-section__title">Seu Progresso</h3>
+                    <div class="progress-bar">
+                        <div class="progress-bar__fill" style="width: 0%"></div>
+                        <span class="progress-bar__text">0% completo</span>
+                    </div>
+                </div>
+
+                <div class="card-grid">
+                    <article class="card">
+                        <h3 class="card__title">Semântica HTML</h3>
+                        <p class="card__text">Use elementos HTML que descrevem corretamente seu conteúdo</p>
+                        <pre class="card__code"><code>&lt;header&gt;
+  &lt;nav&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href="/"&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/nav&gt;
+&lt;/header&gt;
+
+&lt;main&gt;
+  &lt;article&gt;
+    &lt;h1&gt;Título&lt;/h1&gt;
+    &lt;p&gt;Conteúdo&lt;/p&gt;
+  &lt;/article&gt;
+&lt;/main&gt;</code></pre>
+                        <p class="card__usage">Melhora a acessibilidade e SEO do seu site.</p>
+                    </article>
+
+                    <article class="card">
+                        <h3 class="card__title">CSS Organizado</h3>
+                        <p class="card__text">Mantenha seu CSS limpo e organizado usando metodologias como BEM</p>
+                        <pre class="card__code"><code>/* Bloco */
+.card { }
+
+/* Elemento */
+.card__title { }
+.card__content { }
+
+/* Modificador */
+.card--featured { }
+.card--dark { }</code></pre>
+                        <p class="card__usage">Facilita a manutenção e escalabilidade do código.</p>
+                    </article>
+
+                    <article class="card">
+                        <h3 class="card__title">JavaScript Modular</h3>
+                        <p class="card__text">Organize seu código em módulos reutilizáveis</p>
+                        <pre class="card__code"><code>// modulo.js
+export function calcularTotal(items) {
+  return items.reduce((total, item) => 
+    total + item.preco, 0
+  );
+}
+
+// app.js
+import { calcularTotal } from './modulo.js';
+const total = calcularTotal(carrinho);</code></pre>
+                        <p class="card__usage">Melhora a manutenibilidade e testabilidade.</p>
+                    </article>
+
+                    <article class="card">
+                        <h3 class="card__title">Design Responsivo</h3>
+                        <p class="card__text">Desenvolva pensando em diferentes tamanhos de tela</p>
+                        <pre class="card__code"><code>/* Mobile First */
+.container {
+  width: 100%;
+  padding: 1rem;
+}
+
+/* Tablets */
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+}</code></pre>
+                        <p class="card__usage">Garante uma boa experiência em todos os dispositivos.</p>
+                    </article>
+                </div>
+
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <nav class="footer__nav">
+                <ul class="footer__list">
+                    <li><a href="tecnologias.html" class="footer__link">Tecnologias</a></li>
+                    <li><a href="boas-praticas.html" class="footer__link">Boas Práticas</a></li>
+                    <li><a href="fluxo.html" class="footer__link">Fluxo</a></li>
+                    <li><a href="quiz.html" class="footer__link">Quiz</a></li>
+                </ul>
+            </nav>
+            <p class="footer__copyright">&copy; 2025 Guia Profissional de Desenvolvimento Web</p>
+        </div>
+    </footer>
+
+    <script type="module" src="../js/main.js"></script>
+    <script type="module" src="../js/best-practices.js"></script>
+</body>
+</html>

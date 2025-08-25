@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fluxo de Trabalho - Guia Profissional de Desenvolvimento Web</title>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="header__title">Guia Profissional de Desenvolvimento Web</h1>
+            <button class="header__menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-nav">
+                <span class="hamburger"></span>
+            </button>
+            <nav id="main-nav" class="nav">
+                <ul class="nav__list">
+                    <li><a href="index.html" class="nav__link">Home</a></li>
+                    <li><a href="tecnologias.html" class="nav__link">Tecnologias</a></li>
+                    <li><a href="boas-praticas.html" class="nav__link">Boas Práticas</a></li>
+                    <li><a href="fluxo.html" class="nav__link nav__link--active">Fluxo</a></li>
+                    <li><a href="quiz.html" class="nav__link">Quiz</a></li>
+                </ul>
+            </nav>
+            <button class="theme-toggle" aria-label="Alternar tema">
+                <svg class="theme-toggle__icon" width="24" height="24" aria-hidden="true">
+                    <use href="../assets/icons.svg#sun"></use>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero hero--small">
+            <div class="container">
+                <h2 class="hero__title">Fluxo de Desenvolvimento Web</h2>
+                <p class="hero__text">Entenda cada etapa do processo de desenvolvimento de um projeto web</p>
+            </div>
+        </section>
+
+        <section class="workflow">
+            <div class="container">
+                <div class="card-grid">
+                    <article class="card">
+                        <h3 class="card__title">1. Planejamento</h3>
+                        <p class="card__text">A fase inicial de qualquer projeto web</p>
+                        <pre class="card__code"><code>1. Definir objetivos
+2. Analisar público-alvo
+3. Planejar arquitetura
+4. Criar cronograma
+5. Definir tecnologias</code></pre>
+                        <p class="card__usage">Fundamental para o sucesso do projeto.</p>
+                    </article>
+
+                    <article class="card">
+                        <h3 class="card__title">2. Design</h3>
+                        <p class="card__text">Criação da interface e experiência do usuário</p>
+                        <pre class="card__code"><code>1. Wireframes
+2. Design System
+3. Protótipo
+4. Testes de usabilidade
+5. Aprovação final</code></pre>
+                        <p class="card__usage">Define a aparência e usabilidade.</p>
+                    </article>
+
+                    <article class="card">
+                        <h3 class="card__title">3. Desenvolvimento</h3>
+                        <p class="card__text">Implementação do projeto</p>
+                        <pre class="card__code"><code>1. Setup do ambiente
+2. Desenvolvimento Front-end
+3. Desenvolvimento Back-end
+4. Integração de APIs
+5. Otimização</code></pre>
+                        <p class="card__usage">Transformar design em código funcional.</p>
+                    </article>
+
+                    <article class="card">
+                        <h3 class="card__title">4. Testes</h3>
+                        <p class="card__text">Garantia de qualidade</p>
+                        <pre class="card__code"><code>1. Testes unitários
+2. Testes de integração
+3. Testes de UI
+4. Testes de performance
+5. Correção de bugs</code></pre>
+                        <p class="card__usage">Assegura a qualidade do produto.</p>
+                    </article>
+
+                    <article class="card">
+                        <h3 class="card__title">5. Deploy</h3>
+                        <p class="card__text">Publicação do projeto</p>
+                        <pre class="card__code"><code>1. Preparar ambiente
+2. Configurar servidor
+3. Deploy do código
+4. Testes finais
+5. Monitoramento</code></pre>
+                        <p class="card__usage">Colocar o projeto no ar.</p>
+                    </article>
+
+                    <article class="card">
+                        <h3 class="card__title">6. Manutenção</h3>
+                        <p class="card__text">Atualizações e melhorias contínuas</p>
+                        <pre class="card__code"><code>1. Monitorar performance
+2. Atualizar dependências
+3. Corrigir bugs
+4. Implementar melhorias
+5. Backup regular</code></pre>
+                        <p class="card__usage">Manter o projeto funcionando bem.</p>
+                    </article>
+                </div>
+
+                    <div class="timeline__item" data-step="requisitos">
+                        <h3 class="timeline__title">2. Requisitos</h3>
+                        <div class="timeline__content">
+                            <h4>Entregas:</h4>
+                            <ul>
+                                <li>Documento de requisitos</li>
+                                <li>User stories</li>
+                                <li>Critérios de aceitação</li>
+                            </ul>
+                            <h4>Riscos:</h4>
+                            <ul>
+                                <li>Escopo indefinido</li>
+                                <li>Falta de priorização</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Outros passos serão adicionados via JavaScript -->
+                </div>
+
+                <div class="workflow-diagram">
+                    <!-- SVG do fluxograma será inserido aqui -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <nav class="footer__nav">
+                <ul class="footer__list">
+                    <li><a href="tecnologias.html" class="footer__link">Tecnologias</a></li>
+                    <li><a href="boas-praticas.html" class="footer__link">Boas Práticas</a></li>
+                    <li><a href="fluxo.html" class="footer__link">Fluxo</a></li>
+                    <li><a href="quiz.html" class="footer__link">Quiz</a></li>
+                </ul>
+            </nav>
+            <p class="footer__copyright">&copy; 2025 Guia Profissional de Desenvolvimento Web</p>
+        </div>
+    </footer>
+
+    <script type="module" src="../js/main.js"></script>
+    <script type="module" src="../js/workflow.js"></script>
+</body>
+</html>

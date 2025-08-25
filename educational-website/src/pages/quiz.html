@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz - Guia Profissional de Desenvolvimento Web</title>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="header__title">Guia Profissional de Desenvolvimento Web</h1>
+            <button class="header__menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-nav">
+                <span class="hamburger"></span>
+            </button>
+            <nav id="main-nav" class="nav">
+                <ul class="nav__list">
+                    <li><a href="index.html" class="nav__link">Home</a></li>
+                    <li><a href="tecnologias.html" class="nav__link">Tecnologias</a></li>
+                    <li><a href="boas-praticas.html" class="nav__link">Boas Práticas</a></li>
+                    <li><a href="fluxo.html" class="nav__link">Fluxo</a></li>
+                    <li><a href="quiz.html" class="nav__link nav__link--active">Quiz</a></li>
+                </ul>
+            </nav>
+            <button class="theme-toggle" aria-label="Alternar tema">
+                <svg class="theme-toggle__icon" width="24" height="24" aria-hidden="true">
+                    <use href="../assets/icons.svg#sun"></use>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero hero--small">
+            <div class="container">
+                <h2 class="hero__title">Teste seus Conhecimentos</h2>
+                <p class="hero__text">Avalie seu aprendizado sobre desenvolvimento web com nosso quiz interativo</p>
+            </div>
+        </section>
+
+        <section class="quiz">
+            <div class="container">
+                <div class="card quiz-container">
+                    <div class="quiz-header">
+                        <div class="quiz-progress">
+                            <div class="progress-bar">
+                                <div class="progress-bar__fill"></div>
+                            </div>
+                            <span class="progress-bar__text">Questão <span id="currentQuestion">1</span> de <span id="totalQuestions">10</span></span>
+                        </div>
+                    </div>
+
+                    <div class="quiz-content">
+                        <!-- Estado inicial -->
+                        <div class="quiz-start active card__content">
+                            <h3 class="card__title">Pronto para testar seus conhecimentos?</h3>
+                            <p class="card__text">Este quiz contém questões sobre HTML, CSS, JavaScript e boas práticas de desenvolvimento web.</p>
+                            <div class="card__info">
+                                <p>Sua última pontuação: <span id="lastScore">Nenhuma tentativa ainda</span></p>
+                            </div>
+                            <button class="button button--primary" id="startQuiz">Começar Quiz</button>
+                        </div>
+
+                        <!-- Questões (serão preenchidas via JavaScript) -->
+                        <div class="quiz-questions" hidden>
+                            <div class="question" data-id="1">
+                                <h3>Qual tag HTML5 é mais apropriada para o menu principal do site?</h3>
+                                <div class="options">
+                                    <label class="option">
+                                        <input type="radio" name="q1" value="div">
+                                        <span>&lt;div&gt;</span>
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="q1" value="nav">
+                                        <span>&lt;nav&gt;</span>
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="q1" value="header">
+                                        <span>&lt;header&gt;</span>
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="q1" value="main">
+                                        <span>&lt;main&gt;</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Resultado -->
+                        <div class="quiz-result" hidden>
+                            <h3>Resultado</h3>
+                            <div class="score">
+                                <div class="score__circle">
+                                    <span class="score__number">0</span>
+                                    <span class="score__label">pontos</span>
+                                </div>
+                            </div>
+                            <p class="score__message"></p>
+                            <button class="button button--primary" id="retryQuiz">Tentar Novamente</button>
+                        </div>
+                    </div>
+
+                    <div class="quiz-navigation" hidden>
+                        <button class="button button--secondary" id="prevQuestion" disabled>Anterior</button>
+                        <button class="button button--primary" id="nextQuestion">Próxima</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <nav class="footer__nav">
+                <ul class="footer__list">
+                    <li><a href="tecnologias.html" class="footer__link">Tecnologias</a></li>
+                    <li><a href="boas-praticas.html" class="footer__link">Boas Práticas</a></li>
+                    <li><a href="fluxo.html" class="footer__link">Fluxo</a></li>
+                    <li><a href="quiz.html" class="footer__link">Quiz</a></li>
+                </ul>
+            </nav>
+            <p class="footer__copyright">&copy; 2025 Guia Profissional de Desenvolvimento Web</p>
+        </div>
+    </footer>
+
+    <script type="module" src="../js/main.js"></script>
+    <script type="module" src="../js/quiz.js"></script>
+</body>
+</html>

@@ -1,21 +1,5 @@
-// Gerenciamento do accordion e checklist
+// Gerenciamento do accordion
 const accordion = document.querySelector('.accordion');
-const checkboxes = document.querySelectorAll('.checklist__item input[type="checkbox"]');
-const progressBar = document.querySelector('.progress-bar__fill');
-const progressText = document.querySelector('.progress-bar__text');
-
-// Carregar progresso salvo
-const savedProgress = JSON.parse(localStorage.getItem('practicesProgress') || '{}');
-let totalItems = checkboxes.length;
-let completedItems = 0;
-
-// Inicializar checkboxes com estado salvo
-checkboxes.forEach(checkbox => {
-    checkbox.checked = savedProgress[checkbox.name] || false;
-    if (checkbox.checked) completedItems++;
-});
-
-updateProgress();
 
 // Event listeners para accordion
 document.querySelectorAll('.accordion__header').forEach(header => {
@@ -47,25 +31,6 @@ document.querySelectorAll('.accordion__header').forEach(header => {
 });
 
 // Event listeners para checkboxes
-checkboxes.forEach(checkbox => {
-    checkbox.addEventListener('change', () => {
-        // Atualizar contagem
-        completedItems = Array.from(checkboxes).filter(cb => cb.checked).length;
-        
-        // Salvar progresso
-        savedProgress[checkbox.name] = checkbox.checked;
-        localStorage.setItem('practicesProgress', JSON.stringify(savedProgress));
-        
-        // Atualizar barra de progresso
-        updateProgress();
-    });
-});
-
-function updateProgress() {
-    const percentage = (completedItems / totalItems) * 100;
-    progressBar.style.width = `${percentage}%`;
-    progressText.textContent = `${Math.round(percentage)}% completo`;
-}
 
 // Navegação por teclado
 document.addEventListener('keydown', e => {

@@ -20,7 +20,86 @@ const questions = [
             { text: 'position', value: 'position' }
         ]
     },
-    // Adicione mais questões aqui
+    {
+        id: 3,
+        question: 'Qual é a melhor prática para organizar arquivos CSS em um projeto?',
+        options: [
+            { text: 'Ter apenas um arquivo CSS grande', value: 'single' },
+            { text: 'Dividir por componentes e usar import/include', value: 'components', correct: true },
+            { text: 'Criar um arquivo para cada página', value: 'pages' },
+            { text: 'Colocar o CSS diretamente nas tags HTML', value: 'inline' }
+        ]
+    },
+    {
+        id: 4,
+        question: 'Qual método JavaScript é usado para adicionar um evento a um elemento?',
+        options: [
+            { text: 'onclick()', value: 'onclick' },
+            { text: 'addEventListener()', value: 'addEventListener', correct: true },
+            { text: 'attachEvent()', value: 'attachEvent' },
+            { text: 'handleEvent()', value: 'handleEvent' }
+        ]
+    },
+    {
+        id: 5,
+        question: 'O que significa a sigla API?',
+        options: [
+            { text: 'Advanced Programming Interface', value: 'advanced' },
+            { text: 'Application Programming Interface', value: 'application', correct: true },
+            { text: 'Automated Program Integration', value: 'automated' },
+            { text: 'Active Program Interface', value: 'active' }
+        ]
+    },
+    {
+        id: 6,
+        question: 'Qual é a maneira correta de comentar em CSS?',
+        options: [
+            { text: '// Comentário', value: 'double-slash' },
+            { text: '/* Comentário */', value: 'slash-star', correct: true },
+            { text: '<!-- Comentário -->', value: 'html-comment' },
+            { text: '# Comentário', value: 'hash' }
+        ]
+    },
+    {
+        id: 7,
+        question: 'Qual é o propósito do arquivo package.json em um projeto Node.js?',
+        options: [
+            { text: 'Armazenar código JavaScript', value: 'code' },
+            { text: 'Gerenciar dependências e scripts do projeto', value: 'dependencies', correct: true },
+            { text: 'Definir rotas da aplicação', value: 'routes' },
+            { text: 'Configurar o servidor web', value: 'server' }
+        ]
+    },
+    {
+        id: 8,
+        question: 'O que significa a sigla SEO?',
+        options: [
+            { text: 'Search Engine Optimization', value: 'search', correct: true },
+            { text: 'Search Engine Organization', value: 'organization' },
+            { text: 'Site Engine Optimization', value: 'site' },
+            { text: 'System Engine Organization', value: 'system' }
+        ]
+    },
+    {
+        id: 9,
+        question: 'Qual é a função do atributo alt em uma imagem?',
+        options: [
+            { text: 'Definir um título para a imagem', value: 'title' },
+            { text: 'Fornecer texto alternativo para acessibilidade', value: 'accessibility', correct: true },
+            { text: 'Adicionar um link à imagem', value: 'link' },
+            { text: 'Definir o tamanho da imagem', value: 'size' }
+        ]
+    },
+    {
+        id: 10,
+        question: 'O que é um framework CSS?',
+        options: [
+            { text: 'Um editor de CSS', value: 'editor' },
+            { text: 'Uma biblioteca de componentes e estilos pré-definidos', value: 'library', correct: true },
+            { text: 'Um plugin para navegadores', value: 'plugin' },
+            { text: 'Um conversor de CSS para HTML', value: 'converter' }
+        ]
+    }
 ];
 
 // Elementos do DOM
